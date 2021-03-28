@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-const API = `http://www.omdbapi.com/?apikey=${process.env.REACT_APP_MOVIE_API_KEY}`;
+const API = `http://www.omdbapi.com/?apikey=76c14f33`;
 const useFetch = (urlParams) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState({ show: false, msg: "" });
@@ -21,7 +21,7 @@ const useFetch = (urlParams) => {
         }
     }
     useEffect(() => {
-        fetchMovies(`${API}${urlParams}`)
+        fetchMovies(`${API} ${urlParams} `)
     }, [urlParams])
     return { isLoading, error, data }
 }
