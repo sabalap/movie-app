@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-const API = `http://www.omdbapi.com/?apikey=76c14f33`;
+const API = `https://www.omdbapi.com/?apikey=76c14f33`;
 const useFetch = (urlParams) => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState({ show: false, msg: "" });
